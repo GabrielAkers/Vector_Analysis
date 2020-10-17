@@ -24,8 +24,6 @@ def grad_desc(x, y, n=0):
     # of the gradient so i just used a list comprehension. again: 6am
     direction = [i * -1 for i in grad_f(x, y)]
 
-    # print(direction)
-
     # stop when the gradient is "almost" zero. i.e. the curve flattens out. note this is prone to getting stuck if the
     # surface isn't convex everywhere, but w/e it works here since the surface is a paraboloid
     if abs(direction[0]) <= close_enough and abs(direction[1]) <= close_enough:
